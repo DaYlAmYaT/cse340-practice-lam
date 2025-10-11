@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+<main>
+    <h1><%= title %></h1>
+    <p>Browse our instructor and click on their name to see detailed information.</p>
+
+    <div class="course-list">
+        <% faculties.forEach(faculty => { %>
+            <div class="course-card">
+                <h3><a href="/faculty/<%= faculty.key %>"><%= faculty.name %></a></h3>
+                <p>Deapartment: <%= faculty.department %></p>
+                <p>Title: <%= faculty.title %></p>
+            </div>
+        <% }); %>
+    </div>
+
+    <div class="navigation">
+        <p><a href="/">&larr; Back to Home</a></p>
+    </div>
+</main>
+<%- include('../partials/footer') %>
